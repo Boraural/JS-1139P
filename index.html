@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container-fluid d-grid justify-content-center h-100 align-items-start">
+        <div class="row mt-5 justify-content-center">
+            <div class="col-12 d-flex justify-content-center justify-content-md-evenly">
+                <div class="realButton1 p-3 d-grid d-sm-flex justify-content-center">
+                    <button id="incrementRealButton">+</button>
+                    <button id="decrementRealButton">-</button>
+                </div>
+                <div class="resetButton d-flex justify-content-center align-items-center">
+                    <button id="resetRealButton">Reset</button>
+                </div>
+                <div class="barcaButton2 p-3 d-grid d-sm-flex justify-content-center">
+                    <button id="incrementBarcaButton">+</button>
+                    <button id="decrementBarcaButton">-</button>
+                </div>
+            </div>
+            <div class="col-md-4 p-5 d-flex justify-content-center align-items-center">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <img class="mb-4" src="images/20220530202522!Real_Madrid.png" alt="Real" width="200"
+                            height="200">
+
+                    </div>
+                    <div class="col-12 bg-light p-1 d-flex justify-content-center rounded-pill opacity-75">
+                        <div class="item-1 me-3 px-2 bg-success rounded-2">G</div>
+                        <div class="item-2 me-3 px-2 bg-success rounded-2">G</div>
+                        <div class="item-3 me-3 px-2 bg-warning rounded-2">B</div>
+                        <div class="item-4 me-3 px-2 bg-danger rounded-2">M</div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="col-md-2 d-flex flex-column justify-content-center align-items-center">
+                <div class="blinking-text fs-3 ps-1 fw-bold bg-light rounded-3">63'</div>
+                <div class="score d-flex">
+                    <p class="display-1 fw-bold text-white counterText1"><span id="counterone">0</span></p>
+                    <p class="text-white display-1 fw-bold mx-3">-</p>
+                    <p class="display-1 fw-bold text-white counterText2"><span id="countertwo">0</span></p>
+                </div>
+            </div>
+            <div class="col-md-4 p-5 d-flex justify-content-center align-items-center ms-md-4">
+                <div class="row">
+                    <div class="col-12 d-flex justify-content-center align-items-center">
+                        <img class="mb-4" src="images/FC_Barcelona_(crest).svg.png" alt="Barcelona" width="200"
+                            height="200">
+                    </div>
+                    <div class="col-12 bg-light p-1 d-flex justify-content-center rounded-pill opacity-75">
+                        <div class="item-1 me-3 px-2 bg-danger rounded-2">M</div>
+                        <div class="item-2 me-3 px-2 bg-success rounded-2">G</div>
+                        <div class="item-3 me-3 px-2 bg-warning rounded-2">B</div>
+                        <div class="item-4 me-3 px-2 bg-success rounded-2">G</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="onlyJsBet bg-light my-5">
+                <div class="onlyJsBet-header">
+                    <p class="text-center display-2 pb-4">OnlyJsBet</p>
+                </div>
+                <div class="row p-5 pt-0">
+                    <div class="col-lg-3">
+                        <table>
+                            <tbody>
+                                <thead>
+                                    <tr>
+                                        <th>MS 1</th>
+                                        <th>MS X</th>
+                                        <th>MS 2</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td><span id="macSonucu1">2.30</span> <span class="triangle"></span></td>
+                                    <td><span id="macSonucuX">3.10</span> <span class="triangle"></span></td>
+                                    <td><span id="macSonucu2">2.70</span> <span class="triangle"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-3">
+                        <table>
+                            <tbody>
+                                <thead>
+                                    <tr>
+                                        <th>2.5 ALT</th>
+                                        <th>2.5 ÜST</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td><span id="twoAlt">2.30</span> <span class="triangle"></span></td>
+                                    <td><span id="twoUst">2.70</span> <span class="triangle"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-3">
+                        <table>
+                            <tbody>
+                                <thead>
+                                    <tr>
+                                        <th>1.5 ÜST</th>
+                                        <th>1.5 ALT</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td><span id="oneUst">2.30</span> <span class="triangle"></span></td>
+                                    <td><span id="oneAlt">3.10</span> <span class="triangle"></span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-lg-3">
+                        <table>
+                            <tbody>
+                                <thead>
+                                    <tr>
+                                        <th>KG VAR</th>
+                                        <th>KG YOK</th>
+                                    </tr>
+                                </thead>
+                                <tr>
+                                    <td><span id="kgVar">2.10</span></td>
+                                    <td><span id="kgYok">2.90</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div id="carouselExampleIndicators" class="carousel slide p-5">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="container px-md-5">
+                            <div class="matchStats p-3 text-center">
+                                <div
+                                    class="small-logo-cont d-flex justify-content-center align-items-center d-none d-lg-block rounded-4">
+                                    <p class="my-3 fw-medium"> <img src="images/20220530202522!Real_Madrid.png"
+                                            width="50" height="50" class="logo-real-small me-3"> Real Madrid <span
+                                            class="mx-5 p-2 rounded-3">0 -
+                                            0</span>
+                                        Barcelona
+                                        <img src="images/FC_Barcelona_(crest).svg.png" width="50" height="50"
+                                            class="logo-barca-small ms-3">
+                                    </p>
+                                </div>
+                                <table>
+                                    <tbody>
+                                        <tr>
+                                            <td>50%</td>
+                                            <td class="stats-main">BALL POSSESION</td>
+                                            <td>50%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td class="stats-main">ATTEMPTS</td>
+                                            <td>19</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td class="stats-main">ATTEMPTS ON TARGET</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>11</td>
+                                            <td class="stats-main">BLOCKS AND SAVES</td>
+                                            <td>8</td>
+                                        </tr>
+                                        <tr>
+                                            <td>5</td>
+                                            <td class="stats-main">CORNERS</td>
+                                            <td>5</td>
+                                        </tr>
+                                        <tr>
+                                            <td>2</td>
+                                            <td class="stats-main">OFFSIDES</td>
+                                            <td>0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>7</td>
+                                            <td class="stats-main">FOULS</td>
+                                            <td>11</td>
+                                        </tr>
+                                        <tr>
+                                            <td>1/0</td>
+                                            <td class="stats-main">YELLOW/RED CARDS</td>
+                                            <td>4/0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item mb-5">
+                        <div class="container text-center">
+                            <p class="my-3 fw-medium text-white fs-3">OLD MATCHES REAL MADRİD</p>
+                            <div class="realMatches mx-md-5">
+                                <table>
+                                    <tbody class="fs-5 fw-bold">
+                                        <tr>
+                                            <td>Real Madrid <img src="images/20220530202522!Real_Madrid.png" width="30"
+                                                    height="40" class="ms-3 pb-2">
+                                            </td>
+                                            <td class="stats-main">7 - 3</td>
+                                            <td><img src="images/Getafe_CF_S_A_D_-logo-ECC0F2A882-seeklogo.com.png"
+                                                    width="30" height="30" class="me-5"> Getafe</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valencia <img src="images/Valencia_cf.png" width="30" height="30"
+                                                    class="ms-5">
+                                            </td>
+                                            <td class="stats-main">2 - 2</td>
+                                            <td><img src="images/20220530202522!Real_Madrid.png" width="30" height="40"
+                                                    class="me-2 pb-2"> Real Madrid</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Real Madrid <img src="images/20220530202522!Real_Madrid.png" width="30"
+                                                    height="40" class="ms-3 pb-2"></td>
+                                            <td class="stats-main">3 - 2</td>
+                                            <td><img src="images/Sevillafc.png" width="30" height="30" class="me-5">
+                                                Sevılla
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Malaga <img src="images/Málaga_CF.svg.png" height="30" class="ms-5">
+                                            </td>
+                                            <td class="stats-main">3 - 1</td>
+                                            <td><img src="images/20220530202522!Real_Madrid.png" width="30" height="40"
+                                                    class="me-2 pb-2"> Real Madrid</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Real Madrid <img src="images/20220530202522!Real_Madrid.png" width="30"
+                                                    height="40" class="ms-3 pb-2"></td>
+                                            <td class="stats-main">7 - 3</td>
+                                            <td><img src="images/Logo_of_Granada_Club_de_Fútbol.svg.png" width="30"
+                                                    height="30" class="me-5"> Granada</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item mb-5">
+                        <div class="container text-center">
+                            <p class="my-3 fw-medium text-white fs-3">OLD MATCHES BARCELONA</p>
+                            <div class="realMatches mx-md-5">
+                                <table>
+                                    <tbody class="fs-5 fw-bold">
+                                        <tr>
+                                            <td>Barcelona <img src="images/FC_Barcelona_(crest).svg.png" width="30"
+                                                    height="40" class="ms-3 pb-2">
+                                            </td>
+                                            <td class="stats-main">7 - 3</td>
+                                            <td><img src="images/Getafe_CF_S_A_D_-logo-ECC0F2A882-seeklogo.com.png"
+                                                    width="30" height="30" class="me-5"> Getafe</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Valencia <img src="images/Valencia_cf.png" width="30" height="30"
+                                                    class="ms-4">
+                                            </td>
+                                            <td class="stats-main">2 - 2</td>
+                                            <td><img src="images/FC_Barcelona_(crest).svg.png" width="30" height="40"
+                                                    class="me-3 pb-2"> Barcelona
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Barcelona <img src="images/FC_Barcelona_(crest).svg.png" width="30"
+                                                    height="40" class="ms-3 pb-2">
+                                            </td>
+                                            <td class="stats-main">3 - 2</td>
+                                            <td><img src="images/Sevillafc.png" width="30" height="30" class="me-5">
+                                                Sevılla
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Malaga <img src="images/Málaga_CF.svg.png" height="30" class="ms-5">
+                                            </td>
+                                            <td class="stats-main">3 - 1</td>
+                                            <td><img src="images/FC_Barcelona_(crest).svg.png" width="30" height="40"
+                                                    class="me-3 pb-2"> Barcelona
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Barcelona <img src="images/FC_Barcelona_(crest).svg.png" width="30"
+                                                    height="40" class="ms-3 pb-2">
+                                            </td>
+                                            <td class="stats-main">7 - 3</td>
+                                            <td><img src="images/Logo_of_Granada_Club_de_Fútbol.svg.png" width="30"
+                                                    height="30" class="me-4"> Granada</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

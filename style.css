@@ -1,0 +1,183 @@
+body {
+    background-image: url(/images/wp11954242.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #021742 !important;
+    font-weight: bold;
+    border-radius: 30px;
+    opacity: 0.9;
+
+}
+
+th,
+td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+}
+
+.matchStats p {
+    font-size: 2rem;
+    color: #fff;
+}
+
+.matchStats span {
+    background-color: #021742;
+    color: #fff;
+    height: 100vh;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.stats-main {
+    background-color: #021742;
+    color: #fff;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+}
+
+/* Bet Kısmı */
+.onlyJsBet {
+    border-radius: 30px;
+    opacity: 0.9;
+}
+
+.onlyJsBet thead {
+    background-color: #021742;
+    color: white;
+    font-size: 1rem;
+}
+
+.onlyJsBet tbody {
+    font-size: 0.80rem;
+}
+
+.onlyJsBet p {
+    width: 90%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 10px;
+    font-style: italic;
+    font-weight: 600;
+    border: 1px solid #fff;
+    background: linear-gradient(45deg, #2937f0, #9f1ae2);
+    border-radius: 30px;
+}
+
+.onlyJsBet-header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#incrementRealButton,
+#decrementRealButton,
+#incrementBarcaButton,
+#decrementBarcaButton {
+    margin: 10px 10px;
+    padding: 5px 25px;
+    font-size: 30px;
+    font-weight: bold;
+    background: linear-gradient(45deg, #2937f0, #9f1ae2);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#decrementRealButton,
+#decrementBarcaButton {
+    padding: 5px 30px;
+}
+
+
+#resetRealButton {
+    margin: 0 10px;
+    padding: 5px 25px;
+    font-size: 20px;
+    font-weight: bold;
+    background: linear-gradient(#2937f0, #9f1ae2);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+}
+
+#decrementRealButton:hover {
+    background: red;
+    transition: 1s ease;
+}
+
+#incrementRealButton:hover {
+    background: #45a049;
+    transition: 1s ease;
+}
+
+#decrementBarcaButton:hover {
+    background: red;
+    transition: 1s ease;
+}
+
+#incrementBarcaButton:hover {
+    background: #45a049;
+    transition: 1s ease;
+}
+
+#resetRealButton:hover {
+    background: #fff;
+    color: #021742;
+    transition: 1s ease;
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-style: solid;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+.green-triangle {
+    border-width: 0 10px 20px 10px;
+    border-color: transparent transparent green transparent;
+}
+
+.red-triangle {
+    border-width: 20px 10px 0 10px;
+    border-color: red transparent transparent transparent;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.blinking-text {
+    animation: blink 2s infinite;
+    color: green;
+}
